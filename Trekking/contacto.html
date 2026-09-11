@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contactá a Cumbre Salvaje — trekking y turismo aventura en Argentina. WhatsApp, Instagram, email y formulario de contacto." />
+  <title>Contacto | Cumbre Salvaje — Trekking & Turismo Aventura</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Estilos adicionales exclusivos de contacto ── */
+    .form-feedback {
+      display: none;
+      padding: 0.9rem 1.2rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+    }
+
+    .form-feedback--success {
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      color: #4ade80;
+    }
+
+    .form-feedback--error {
+      background: rgba(229, 37, 33, 0.12);
+      border: 1px solid rgba(229, 37, 33, 0.35);
+      color: #f87171;
+    }
+
+    /* Mapa placeholder */
+    .mapa-placeholder {
+      width: 100%;
+      height: 200px;
+      background: var(--color-negro);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--color-gris-cla);
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      margin-top: var(--gap-md);
+    }
+
+    .mapa-placeholder svg {
+      color: var(--color-naranja);
+      opacity: 0.7;
+    }
+
+    /* Horarios */
+    .horarios {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1.25rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      margin-top: var(--gap-md);
+    }
+
+    .horarios__title {
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-naranja);
+      margin-bottom: 0.5rem;
+    }
+
+    .horario-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      color: var(--color-gris-cla);
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .horario-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .horario-item span:last-child {
+      color: var(--color-blanco);
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo" aria-label="Cumbre Salvaje — Inicio">
+          <div class="logo-icon">
+            <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <polygon points="21,4 38,36 4,36" fill="none" stroke="#FF6B00" stroke-width="2.5"
+                stroke-linejoin="round" />
+              <polyline points="13,36 21,20 28,30" fill="none" stroke="#E52521" stroke-width="2"
+                stroke-linejoin="round" />
+              <circle cx="21" cy="10" r="2" fill="#FFD200" />
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Cumbre Salvaje</span>
+            <span class="logo-tagline">Trekking &amp; Aventura</span>
+          </div>
+        </a>
+        <nav class="header__nav" role="navigation" aria-label="Navegación principal">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link">Inicio</a></li>
+            <li><a href="expediciones.html" class="nav__link">Expediciones</a></li>
+            <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+            <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+            <li><a href="contacto.html" class="nav__link nav__cta active">Contacto</a></li>
+          </ul>
+        </nav>
+        <button class="header__hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Contacto">
+    <div class="page-hero__bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero__content">
+        <p class="page-hero__eyebrow">Estamos para vos</p>
+        <h1 class="page-hero__title reveal">Contacto</h1>
+        <p class="page-hero__desc reveal reveal-delay-1">
+          Tenés preguntas, querés reservar un lugar o simplemente charlar sobre montaña — escribinos. Te respondemos en
+          menos de 24 horas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CONTACTO -->
+  <main class="contacto" id="main-content">
+    <div class="container">
+      <div class="contacto__grid">
+
+        <!-- ── COLUMNA IZQUIERDA: Formulario ── -->
+        <div class="reveal-left">
+          <span class="section-tag">Formulario de contacto</span>
+          <h2 class="section-title" style="margin-bottom:var(--gap-md);font-size:clamp(2rem,5vw,3.5rem);">
+            Mandanos<br><span>un mensaje</span>
+          </h2>
+
+          <!--
+            FORMULARIO DE CONTACTO
+            Para integrar con backend: cambiar action="" y method="POST"
+            o usar fetch() / XMLHttpRequest en script.js
+          -->
+          <form class="contact-form" id="contactForm" action="#" method="POST" novalidate
+            aria-label="Formulario de contacto">
+
+            <!-- Nombre completo -->
+            <div class="form-group">
+              <label class="form-label" for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+              <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej: María González" required
+                autocomplete="name" aria-required="true" />
+            </div>
+
+            <!-- Email y Teléfono en fila -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required
+                  autocomplete="email" aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+54 9 11 0000-0000"
+                  autocomplete="tel" />
+              </div>
+            </div>
+
+            <!-- Interés -->
+            <div class="form-group">
+              <label class="form-label" for="interes">¿En qué estás interesado?</label>
+              <select id="interes" name="interes" class="form-input" style="cursor:pointer;appearance:none;">
+                <option value="" disabled selected>Seleccioná una opción</option>
+                <option value="trekking-guiado">Trekking guiado</option>
+                <option value="campamento">Campamento de montaña</option>
+                <option value="alta-montana">Expedición de alta montaña</option>
+                <option value="grupal">Actividad grupal / corporativa</option>
+                <option value="asesoramiento">Asesoramiento</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+              <label class="form-label" for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+              <textarea id="mensaje" name="mensaje" class="form-textarea"
+                placeholder="Contanos qué aventura tenés en mente, cuántas personas van, fechas tentativas..." required
+                aria-required="true"></textarea>
+            </div>
+
+            <!-- Feedback de validación / envío -->
+            <div class="form-feedback" role="alert" aria-live="polite"></div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary form-submit"
+              style="width:100%;justify-content:center;padding:1rem;">
+              Enviar mensaje
+              <span class="arrow" aria-hidden="true">→</span>
+            </button>
+
+            <p style="font-size:0.78rem;color:var(--color-gris-cla);text-align:center;margin-top:0.5rem;">
+              * Campos obligatorios. Tu información es confidencial y nunca será compartida.
+            </p>
+
+          </form>
+        </div>
+
+        <!-- ── COLUMNA DERECHA: Card de contacto ── -->
+        <div class="reveal-right">
+
+          <div class="contact-info-card">
+
+            <h2 class="contact-info-card__title">
+              Hablemos<br><span style="color:var(--color-naranja);">directamente</span>
+            </h2>
+            <p class="contact-info-card__sub">
+              Si preferís hablar en lugar de escribir, acá están todos nuestros canales. Respondemos rápido, prometido.
+            </p>
+
+            <!-- Canales -->
+            <div class="contact-channels" role="list">
+
+              <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20saber%20m%C3%A1s%20sobre%20las%20expediciones."
+                class="contact-channel" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp"
+                role="listitem">
+                <div class="contact-channel__icon icon-whatsapp" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                </div>
+                <div class="contact-channel__info">
+                  <div class="contact-channel__label">WhatsApp</div>
+                  <div class="contact-channel__value">+54 9 11 0000-0000</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  style="color:rgba(245,245,240,0.3);flex-shrink:0;" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <a href="https://instagram.com/cumbresalvaje" class="contact-channel" target="_blank"
+                rel="noopener noreferrer" aria-label="Visitar Instagram" role="listitem">
+                <div class="contact-channel__icon icon-instagram" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                  </svg>
+                </div>
+                <div class="contact-channel__info">
+                  <div class="contact-channel__label">Instagram</div>
+                  <div class="contact-channel__value">@cumbresalvaje</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  style="color:rgba(245,245,240,0.3);flex-shrink:0;" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <a href="https://facebook.com/cumbresalvaje" class="contact-channel" target="_blank"
+                rel="noopener noreferrer" aria-label="Visitar Facebook" role="listitem">
+                <div class="contact-channel__icon icon-facebook" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </div>
+                <div class="contact-channel__info">
+                  <div class="contact-channel__label">Facebook</div>
+                  <div class="contact-channel__value">/cumbresalvaje</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  style="color:rgba(245,245,240,0.3);flex-shrink:0;" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+
+              <a href="mailto:info@cumbresalvaje.com.ar" class="contact-channel" aria-label="Enviar email"
+                role="listitem">
+                <div class="contact-channel__icon icon-email" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div class="contact-channel__info">
+                  <div class="contact-channel__label">Correo electrónico</div>
+                  <div class="contact-channel__value">info@cumbresalvaje.com.ar</div>
+                </div>
+              </a>
+
+              <div class="contact-channel" role="listitem" style="cursor:default;">
+                <div class="contact-channel__icon icon-location" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div class="contact-channel__info">
+                  <div class="contact-channel__label">Ubicación</div>
+                  <div class="contact-channel__value">Córdoba, Argentina</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Horarios -->
+            <div class="horarios" role="complementary" aria-label="Horarios de atención">
+              <p class="horarios__title">Horarios de atención</p>
+              <div class="horario-item">
+                <span>Lunes a Viernes</span>
+                <span>9:00 — 18:00 hs</span>
+              </div>
+              <div class="horario-item">
+                <span>Sábados</span>
+                <span>9:00 — 14:00 hs</span>
+              </div>
+              <div class="horario-item">
+                <span>Domingos</span>
+                <span>Solo WhatsApp</span>
+              </div>
+            </div>
+
+            <!-- Mapa placeholder -->
+            <!-- Para integrar Google Maps: reemplazar este div con el iframe de Google Maps -->
+            <div class="mapa-placeholder" aria-label="Mapa de ubicación — próximamente">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Córdoba, Argentina</span>
+              <span style="font-size:0.7rem;opacity:0.5;">Integrar Google Maps aquí</span>
+            </div>
+
+          </div><!-- /contact-info-card -->
+        </div>
+
+      </div><!-- /contacto__grid -->
+    </div>
+  </main>
+
+  <!-- FAQ rápido -->
+  <section style="padding:var(--gap-xl) 0;background:var(--color-gris-osc);" aria-labelledby="faq-titulo">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--gap-lg);">
+        <span class="section-tag reveal">Preguntas frecuentes</span>
+        <h2 class="section-title reveal reveal-delay-1" id="faq-titulo" style="font-size:clamp(2rem,5vw,4rem);">
+          Preguntas<br><span>frecuentes</span>
+        </h2>
+      </div>
+
+      <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:1rem;">
+
+        <details class="reveal"
+          style="background:var(--color-negro);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-sm);overflow:hidden;">
+          <summary
+            style="padding:1.25rem 1.5rem;cursor:pointer;font-family:var(--font-heading);font-size:1.05rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            ¿Necesito experiencia previa para sumarme?
+            <span style="color:var(--color-naranja);font-size:1.5rem;line-height:1;flex-shrink:0;">+</span>
+          </summary>
+          <p style="padding:0 1.5rem 1.25rem;color:var(--color-gris-cla);line-height:1.7;font-size:0.95rem;">
+            No necesariamente. Tenemos salidas para todos los niveles. Las más accesibles no requieren experiencia
+            previa. Sí te recomendamos una buena condición física básica y ganas de disfrutar. Para expediciones de alta
+            montaña sí pedimos experiencia comprobable.
+          </p>
+        </details>
+
+        <details class="reveal reveal-delay-1"
+          style="background:var(--color-negro);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-sm);overflow:hidden;">
+          <summary
+            style="padding:1.25rem 1.5rem;cursor:pointer;font-family:var(--font-heading);font-size:1.05rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            ¿Qué incluye el precio de cada salida?
+            <span style="color:var(--color-naranja);font-size:1.5rem;line-height:1;flex-shrink:0;">+</span>
+          </summary>
+          <p style="padding:0 1.5rem 1.25rem;color:var(--color-gris-cla);line-height:1.7;font-size:0.95rem;">
+            Cada expedición detalla lo que incluye. En general: guía certificado, equipo de emergencia, permisos de
+            acceso al área natural y botiquín. El transporte, comida y equipamiento personal pueden ser opcionales
+            dependiendo del programa.
+          </p>
+        </details>
+
+        <details class="reveal reveal-delay-2"
+          style="background:var(--color-negro);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-sm);overflow:hidden;">
+          <summary
+            style="padding:1.25rem 1.5rem;cursor:pointer;font-family:var(--font-heading);font-size:1.05rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            ¿Qué pasa si el clima no acompaña?
+            <span style="color:var(--color-naranja);font-size:1.5rem;line-height:1;flex-shrink:0;">+</span>
+          </summary>
+          <p style="padding:0 1.5rem 1.25rem;color:var(--color-gris-cla);line-height:1.7;font-size:0.95rem;">
+            La seguridad es nuestra prioridad. Si las condiciones climáticas no son aptas, reprogramamos la salida sin
+            costo adicional. Siempre informamos con anticipación y mantenemos comunicación constante con todos los
+            participantes.
+          </p>
+        </details>
+
+        <details class="reveal reveal-delay-3"
+          style="background:var(--color-negro);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-sm);overflow:hidden;">
+          <summary
+            style="padding:1.25rem 1.5rem;cursor:pointer;font-family:var(--font-heading);font-size:1.05rem;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            ¿Cómo reservo mi lugar?
+            <span style="color:var(--color-naranja);font-size:1.5rem;line-height:1;flex-shrink:0;">+</span>
+          </summary>
+          <p style="padding:0 1.5rem 1.25rem;color:var(--color-gris-cla);line-height:1.7;font-size:0.95rem;">
+            Podés reservar por WhatsApp, por el formulario de esta página o escribiéndonos por Instagram. Te pedimos una
+            seña para confirmar el lugar y el resto se abona antes de la salida. Los cupos son limitados, así que no
+            esperes demasiado.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo">
+            <div class="logo-icon"><svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="21,4 38,36 4,36" fill="none" stroke="#FF6B00" stroke-width="2.5"
+                  stroke-linejoin="round" />
+                <polyline points="13,36 21,20 28,30" fill="none" stroke="#E52521" stroke-width="2"
+                  stroke-linejoin="round" />
+                <circle cx="21" cy="10" r="2" fill="#FFD200" />
+              </svg></div>
+            <div class="logo-text"><span class="logo-name">Cumbre Salvaje</span><span class="logo-tagline">Trekking
+                &amp; Aventura</span></div>
+          </a>
+          <p>Guías especializados en trekking y turismo de aventura por toda Argentina.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg></a>
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg></a>
+            <a href="#" class="social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24"
+                fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Páginas</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="expediciones.html">Expediciones</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Expediciones</h4>
+          <ul class="footer__links">
+            <li><a href="expediciones.html">Cerro Champaquí</a></li>
+            <li><a href="expediciones.html">Quebrada del Condorito</a></li>
+            <li><a href="expediciones.html">Cerro Uritorco</a></li>
+            <li><a href="expediciones.html">Alta Montaña Mendoza</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <address class="footer__contact-items" style="font-style:normal;">
+            <a href="https://wa.me/5491100000000" class="footer__contact-item" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              +54 9 351 5930118
+            </a>
+            <a href="https://www.instagram.com/marie_lemos/" class="footer__contact-item" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+              @marie_lemos
+            </a>
+            <a href="mailto:info@cumbresalvaje.com.ar" class="footer__contact-item" aria-label="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              info@cumbresalvaje.com.ar
+            </a>
+            <span class="footer__contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Córdoba, Argentina
+            </span>
+          </address>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copy">&copy; 2025 <span>Cumbre Salvaje</span>. Todos los derechos reservados.</p>
+          <p class="footer__copy">Diseñado con ♥ para los amantes de la aventura.</p>
+        </div>
+      </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

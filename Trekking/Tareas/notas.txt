@@ -1,0 +1,47 @@
+Tareas: 
+===== HTML =====  
+- Comprobar Index ✔
+- Comprobar expediciones ✔ - Falta agregar exp
+- Comprobar Contacto ✔ - Comprobar back
+- Comprobar nosotros.html ✔
+- Comprobar servicios  ✔
+- Cambiar footers links html ✔
+- Cambiar info de expediciones
+
+===== BACK END ===== 
+
+- Cambiar Wa.Me
+- Comprobar Correo electronico
+
+
+===== EXPEDICIONES ===== 
+- Poner expediciones correctas:
+1- Cerro Champaqui  ✔
+2- Iruya 4x4
+3- Hornocal 4x4
+4- Espectaculares Salinas grandes 4x4
+5- Trekking Tilcara-Calilegua y Termas del jordán 
+6- Humahuaca – Calilegua 4×4
+7- Turismo Rural
+8- Trekking Termas del Jordán
+9- Trekking Las Yungas
+10 - Trekking Calilegua a Tilcara
+16- Trekking Iruya a Nazareno
+17- Trekking Tilcara a Calilegua
+19- Hornocal a Caspalá
+20- Cabalgata Tilcara-Calilegua
+22- Trekking Alto Calilegua
+Ya terminado: 
+
+
+===== EXPEDICIONES HTML ===== 
+7- Turismo Rural
+8- Trekking Termas del Jordán
+9- Trekking Las Yungas
+10 - Trekking Calilegua a Tilcara
+16- Trekking Iruya a Nazareno
+17- Trekking Tilcara a Calilegua
+19- Hornocal a Caspalá
+20- Cabalgata Tilcara-Calilegua
+22- Trekking Alto Calilegua
+Ya terminado: 
