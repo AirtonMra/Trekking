@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Cumbre Salvaje — Trekking y turismo aventura en Argentina. Expediciones guiadas, campamentos y actividades en la naturaleza argentina." />
+  <meta name="keywords"
+    content="trekking argentina, turismo aventura, expediciones montaña, trekking cordillera, campamentos, guías de montaña" />
+  <meta name="author" content="Cumbre Salvaje" />
+  <meta property="og:title" content="Cumbre Salvaje — Trekking & Turismo Aventura" />
+  <meta property="og:description" content="Disfrutá la aventura en la naturaleza argentina con guías especializados." />
+  <meta property="og:type" content="website" />
+  <title>Inicio | Cumbre Salvaje — Trekking & Turismo Aventura</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       OVERLAY MENÚ MÓVIL
+       ============================================================ -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+
+        <!-- LOGO VIEJO  -->
+        <a href="index.html" class="header__logo" aria-label="Cumbre Salvaje — Inicio">
+          <div class="logo-icon">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="50" cy="45" r="18" fill="#FFD200" opacity="0.15" />
+              <circle cx="50" cy="45" r="18" stroke="#FF6B00" stroke-width="2" stroke-dasharray="4 3" />
+
+              <polygon points="25,75 45,45 65,75" fill="#1A1A1A" stroke="#E52521" stroke-width="3"
+                stroke-linejoin="round" />
+
+              <polygon points="35,75 58,30 85,75" fill="#0A0A0A" stroke="#FF6B00" stroke-width="3.5"
+                stroke-linejoin="round" />
+
+              <polyline points="53,40 58,48 64,44" fill="none" stroke="#FFFFFF" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+
+              <line x1="15" y1="75" x2="85" y2="75" stroke="#FF6B00" stroke-width="3" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Cumbre Salvaje</span>
+            <span class="logo-tagline">Trekking &amp; Aventura</span>
+          </div>
+        </a>
+
+
+        <!-- Navegación principal -->
+        <nav class="header__nav" role="navigation" aria-label="Navegación principal">
+          <ul class="nav__list">
+            <li><a href="index.html" class="nav__link active">Inicio</a></li>
+            <li><a href="expediciones.html" class="nav__link">Expediciones</a></li>
+            <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+            <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+            <li><a href="contacto.html" class="nav__link nav__cta">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hamburguesa -->
+        <button class="header__hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-label="Sección principal">
+    <!-- Fondo: reemplazar 'img/hero.jpg' con tu imagen -->
+    <div class="hero__bg" style="background-image:url('img/hero.jpg')" role="img"
+      aria-label="Paisaje de montaña argentina"></div>
+    <div class="hero__overlay"></div>
+
+    <!-- Líneas decorativas -->
+    <div class="hero__lines" aria-hidden="true">
+      <div class="hero__line"></div>
+      <div class="hero__line"></div>
+      <div class="hero__line"></div>
+    </div>
+
+    <!-- Estadísticas flotantes (desktop) -->
+    <aside class="hero__stats" aria-label="Estadísticas">
+      <div class="hero__stat">
+        <div class="hero__stat-number">+100</div>
+        <div class="hero__stat-label">Expediciones</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-number">+1K</div>
+        <div class="hero__stat-label">Viajeros</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-number">10</div>
+        <div class="hero__stat-label">Años</div>
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <div class="container">
+      <div class="hero__content">
+
+        <div class="hero__eyebrow">
+          <div class="hero__eyebrow-line"></div>
+          <span class="hero__eyebrow-text">Argentina · Patagonia · Cordillera</span>
+        </div>
+
+        <h1 class="hero__title">
+          Disfrutá<br>
+          <em>la aventura</em>
+        </h1>
+
+        <p class="hero__subtitle">
+          Sumate a nuestras actividades y disfrutá de la naturaleza argentina en toda su dimensión.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#salidas" class="btn btn-primary" data-scroll-to="salidas">
+            Quiero saber más
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="expediciones.html" class="btn btn-ghost">Ver expediciones</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-bar"></div>
+      <span class="hero__scroll-text">Scroll</span>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       PROXIMAS SALIDAS
+       ============================================================ -->
+  <section class="salidas" id="salidas" aria-labelledby="salidas-titulo">
+    <div class="container">
+
+      <div class="salidas__header">
+        <div>
+          <span class="section-tag reveal">Próximas fechas</span>
+          <h2 class="section-title reveal reveal-delay-1" id="salidas-titulo">
+            Próximas<br><span>salidas</span>
+          </h2>
+        </div>
+        <p class="reveal reveal-delay-2" style="max-width:340px;color:var(--color-gris-cla);line-height:1.7;">
+          Elegí tu próxima aventura. Grupos reducidos, guías certificados y rutas únicas en la naturaleza argentina.
+        </p>
+      </div>
+
+      <div class="salidas__grid">
+
+        <!-- CERRO CHAMPAQUI -->
+        <article class="card reveal reveal-delay-1">
+          <div class="card__image">
+            <!-- Reemplazar: img/expedicion1.jpg -->
+            <img src="img/Iruya.jpg" alt="Travesía Iruya" loading="lazy" />
+            <span class="card__badge">¡Quedan lugares!</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Iruya 4x4</h3>
+            <p class="card__desc">
+           Aventura en vehículo todo terreno hacia el pueblo colgado de la montaña. Un
+              trayecto sinuoso cruzando ríos y el imponente Abra del Cóndor con vistas panorámicas únicas.
+            </p>
+            <div class="card__meta">
+              <span class="card__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+          
+              </span>
+              <span class="card__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                    12Hs
+              </span>
+            </div>
+          </div>
+          <div class="card__footer">
+            <a href="champaqui.html" class="btn btn-ghost" style="width:100%;justify-content:center;">
+              Más información <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- CONDORITO-->
+        <article class="card reveal reveal-delay-2">
+          <div class="card__image">
+            <!-- Reemplazar: img/expedicion2.jpg -->
+            <img src="img/Condorito.jpg" alt="Trekking Quebrada del Condorito" loading="lazy" />
+            <span class="card__badge">Nuevas fechas</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Quebrada del Condorito</h3>
+            <p class="card__desc">
+              Reserva Nacional habitada por cóndores andinos. Senderos con vistas únicas y la oportunidad de ver el
+              vuelo del cóndor.
+            </p>
+            <div class="card__meta">
+              <span class="card__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                22 de Julio
+              </span>
+              <span class="card__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                1 día
+              </span>
+            </div>
+          </div>
+          <div class="card__footer">
+            <a href="condorito.html" class="btn btn-ghost" style="width:100%;justify-content:center;">
+              Más información <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!--Uritorco-->
+        <article class="card reveal reveal-delay-3">
+          <div class="card__image">
+            <!-- Reemplazar: img/expedicion3.jpg -->
+            <img src="img/Urritorco.png" alt="Travesía Cerro Uritorco" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Cerro Uritorco</h3>
+            <p class="card__desc">
+              El cerro más famoso de Córdoba. Un trekking con historia, energía y vistas panorámicas que no olvidarás.
+            </p>
+            <div class="card__meta">
+              <span class="card__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                5 de Agosto
+              </span>
+              <span class="card__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                1 día
+              </span>
+            </div>
+          </div>
+          <div class="card__footer">
+            <a href="expediciones.html" class="btn btn-ghost" style="width:100%;justify-content:center;">
+              Más información <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Mendoza -->
+        <article class="card reveal reveal-delay-4">
+          <div class="card__image">
+            <!-- Reemplazar: img/expedicion4.jpg -->
+            <img src="img/Mendoza.jfif" alt="Travesía Alta Montaña Mendoza" loading="lazy" />
+            <span class="card__badge">Cupos limitados</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Alta Montaña Mendoza</h3>
+            <p class="card__desc">
+              Experiencia completa en los Andes mendocinos. Ruta internacional, glaciares y alturas que ponen a prueba
+              tu espíritu aventurero.
+            </p>  
+            <div class="card__meta">
+              <span class="card__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                18 de Agosto
+              </span>
+              <span class="card__meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                4 días
+              </span>
+            </div>
+          </div>
+          <div class="card__footer">
+            <a href="mendoza.html" class="btn btn-ghost" style="width:100%;justify-content:center;">
+              Más información <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- /salidas__grid -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       VER TODAS LAS EXPEDICIONES
+       ============================================================ -->
+  <section class="ver-todas" aria-label="Ver todas las expediciones">
+    <div class="container">
+      <div class="ver-todas__inner">
+        <p class="ver-todas__label reveal">Más de 20 destinos disponibles</p>
+        <a href="expediciones.html" class="btn btn-orange reveal reveal-delay-1"
+          style="font-size:1rem;padding:1.1rem 2.5rem;">
+          Ver todas nuestras expediciones
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SOMOS TU MEJOR OPCIÓN
+       ============================================================ -->
+  <section class="mejor-opcion" aria-labelledby="mejor-opcion-titulo">
+    <div class="container">
+      <div class="mejor-opcion__grid">
+
+        <!-- Imagen izquierda -->
+        <div class="mejor-opcion__image reveal-left">
+          <div class="mejor-opcion__image-inner">
+            <!-- Reemplazar: img/nosotros.jpg -->
+            <img src="img/nosotros.jpg" alt="Guía de montaña liderando un grupo en la cordillera" />
+          </div>
+        </div>
+
+        <!-- Contenido derecha -->
+        <div class="mejor-opcion__content reveal-right">
+          <span class="section-tag">¿Por qué elegirnos?</span>
+          <h2 class="section-title" id="mejor-opcion-titulo">
+            Somos tu<br><span>mejor opción</span>
+          </h2>
+          <p style="color:var(--color-gris-cla);line-height:1.8;">
+            Con más de 10 años en el campo, hemos acompañado a más de 500 viajeros en expediciones únicas. Nuestra
+            pasión por la naturaleza se combina con estrictos protocolos de seguridad y una organización impecable.
+          </p>
+
+          <div class="mejor-opcion__features">
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Seguridad ante todo</h4>
+                <p>Guías certificados, botiquines completos y protocolos de emergencia en cada salida.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Grupos reducidos</h4>
+                <p>Máximo de personas por salida para garantizar atención personalizada y mejor experiencia.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Experiencia probada</h4>
+                <p>+100 expediciones completadas con éxito en las montañas y sierras de Argentina.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <a href="nosotros.html" class="btn btn-primary">
+            Conozcámonos
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CTA FINAL
+       ============================================================ -->
+  <section class="cta-final" aria-label="Contactanos">
+    <!-- Reemplazar: img/cta-bg.jpg -->
+    <div class="cta-final__bg" style="background-image:url('img/cta-bg.jpg')" role="img"
+      aria-label="Montaña al atardecer"></div>
+    <div class="cta-final__overlay"></div>
+
+    <div class="container">
+      <div class="cta-final__content reveal">
+        <h2 class="cta-final__title">
+          Conozcámonos
+          <span>¿Empezamos?</span>
+        </h2>
+        <p class="cta-final__sub">
+          Contanos qué tipo de aventura buscás y armamos la salida ideal para vos.
+        </p>
+        <a href="contacto.html" class="btn btn-primary" style="font-size:1rem;padding:1.1rem 2.5rem;">
+          Escribinos ahora
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Marca -->
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo" aria-label="Cumbre Salvaje">
+            <div class="logo-icon">
+              <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon points="21,4 38,36 4,36" fill="none" stroke="#FF6B00" stroke-width="2.5"
+                  stroke-linejoin="round" />
+                <polyline points="13,36 21,20 28,30" fill="none" stroke="#E52521" stroke-width="2"
+                  stroke-linejoin="round" />
+                <circle cx="21" cy="10" r="2" fill="#FFD200" />
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Cumbre Salvaje</span>
+              <span class="logo-tagline">Trekking &amp; Aventura</span>
+            </div>
+          </a>
+          <p>Guías especializados en trekking y turismo de aventura. Conectamos personas con la naturaleza argentina de
+            manera segura y apasionante.</p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="#" class="social-link" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div class="footer__col">
+          <h4>Páginas</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="expediciones.html">Expediciones</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Expediciones -->
+        <div class="footer__col">
+          <h4>Expediciones</h4>
+          <ul class="footer__links">
+            <li><a href="champaqui.html">Cerro Champaquí</a></li>
+            <li><a href="expediciones.html">Quebrada del Condorito</a></li>
+            <li><a href="uritorco.html">Cerro Uritorco</a></li>
+            <li><a href="expediciones.html">Alta Montaña Mendoza</a></li>
+            <li><a href="expediciones.html">Ver todas</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <address class="footer__contact-items" style="font-style:normal;">
+            <a href="https://wa.me/5491100000000" class="footer__contact-item" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              +54 9 351 5930118
+            </a>
+            <a href="https://www.instagram.com/marie_lemos/" class="footer__contact-item" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+              @marie_lemos
+            </a>
+            <a href="mailto:info@cumbresalvaje.com.ar" class="footer__contact-item" aria-label="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              info@cumbresalvaje.com.ar
+            </a>
+            <span class="footer__contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Córdoba, Argentina
+            </span>
+          </address>
+        </div>
+
+      </div><!-- /footer__grid -->
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          &copy; 2025 <span>Cumbre Salvaje</span>. Todos los derechos reservados.
+        </p>
+        <p class="footer__copy">
+          Diseñado con ♥ para los amantes de la aventura.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
