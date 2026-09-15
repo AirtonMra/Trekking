@@ -3,9 +3,14 @@
  * JavaScript Vanilla — sin frameworks ni librerías externas
  */
 
+
+
 /* ============================================================
    1. HEADER — scroll, hamburger, nav activo
    ============================================================ */
+
+
+   
 
 (function initHeader() {
   const header = document.querySelector(".header");
@@ -14,7 +19,7 @@
   const overlay = document.querySelector(".nav-overlay");
   const navLinks = document.querySelectorAll(".nav__link");
 
-  if (!header) return;
+  if (!header) return; 
 
   // ── Scroll: agregar clase .scrolled ──────────────────────
   function onScroll() {
@@ -24,6 +29,10 @@
       header.classList.remove("scrolled");
     }
   }
+
+
+
+
 
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll(); // ejecutar una vez al cargar
@@ -265,82 +274,113 @@
    8. FORMULARIO DE CONTACTO — validación básica
    ============================================================ */
 
-(function initContactForm() {
-  var form = document.querySelector(".contact-form");
+function initContactForm() {
+  const form = document.getElementById("contactForm");
+
+  // Si la página no tiene formulario, no hacemos nada.
   if (!form) return;
 
-  var submitBtn = form.querySelector(".form-submit");
-  var feedback = form.querySelector(".form-feedback");
+  const feedback = form.querySelector(".form-feedback");
+  const submitButton = form.querySelector(".form-submit");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  // Evita errores si falta algún elemento.
+  if (!feedback || !submitButton) return;
 
-    // Limpiar errores previos
-    form.querySelectorAll(".form-input, .form-textarea").forEach(function (el) {
-      el.style.borderColor = "";
-    });
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-    var isValid = true;
+    // Referencias a los campos
+    const nombre = document.getElementById("nombre");
+    const email = document.getElementById("email");
+    const mensaje = document.getElementById("mensaje");
 
-    // Validar cada campo requerido
-    form.querySelectorAll("[required]").forEach(function (el) {
-      if (!el.value.trim()) {
-        el.style.borderColor = "#E52521";
-        isValid = false;
-      }
-    });
+    // Limpiar mensajes anteriores
+    feedback.textContent = "";
+    feedback.className = "form-feedback";
 
-    // Validar email
-    var emailEl = form.querySelector("#email");
-    if (emailEl && emailEl.value) {
-      var emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRx.test(emailEl.value)) {
-        emailEl.style.borderColor = "#E52521";
-        isValid = false;
-      }
-    }
-
-    if (!isValid) {
-      showFeedback(
-        "Por favor completá todos los campos correctamente.",
-        "error",
-      );
+    // Validación del nombre
+    if (!nombre.value.trim()) {
+      feedback.textContent = "Por favor, ingresá tu nombre.";
+      feedback.classList.add("error");
+      nombre.focus();
       return;
     }
 
-    // Simular envío (aquí se integraría el backend)
-    if (submitBtn) {
-      submitBtn.textContent = "Enviando…";
-      submitBtn.disabled = true;
+    // Validación del email
+    if (!email.value.trim() || !email.validity.valid) {
+      feedback.textContent = "Por favor, ingresá un email válido.";
+      feedback.classList.add("error");
+      email.focus();
+      return;
     }
 
-    setTimeout(function () {
-      showFeedback(
-        "¡Mensaje enviado! Te contactaremos a la brevedad.",
-        "success",
-      );
-      form.reset();
-      if (submitBtn) {
-        submitBtn.textContent = "Enviar mensaje";
-        submitBtn.disabled = false;
+    // Validación del mensaje
+    if (!mensaje.value.trim()) {
+      feedback.textContent = "Por favor, escribí un mensaje.";
+      feedback.classList.add("error");
+      mensaje.focus();
+      return;
+    }
+
+    // Estado visual mientras se envía
+    submitButton.disabled = true;
+    submitButton.innerHTML = `
+      Enviando...
+      <span class="arrow" aria-hidden="true">→</span>
+    `;
+
+    try {
+      // Envía los datos al endpoint de Formspree
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        // Éxito
+        feedback.textContent =
+          "¡Mensaje enviado correctamente! Te responderemos a la brevedad.";
+
+        feedback.classList.add("success");
+
+        // Limpia los campos
+        form.reset();
+      } else {
+        // Error devuelto por Formspree
+        const data = await response.json().catch(() => null);
+
+        if (data && data.errors) {
+          feedback.textContent = data.errors
+            .map((error) => error.message)
+            .join(", ");
+        } else {
+          feedback.textContent =
+            "No se pudo enviar el mensaje. Intentá nuevamente.";
+        }
+
+        feedback.classList.add("error");
       }
-    }, 1500);
+    } catch (error) {
+      // Error de conexión
+      feedback.textContent =
+        "Ocurrió un error de conexión. Intentá nuevamente.";
+
+      feedback.classList.add("error");
+
+      console.error("Error al enviar el formulario:", error);
+    } finally {
+      // Restaurar botón
+      submitButton.disabled = false;
+      submitButton.innerHTML = `
+        Enviar mensaje
+        <span class="arrow" aria-hidden="true">→</span>
+      `;
+    }
   });
-
-  //Integrar back end
-
-  function showFeedback(msg, type) {
-    if (!feedback) return;
-    feedback.textContent = msg;
-    feedback.className = "form-feedback form-feedback--" + type;
-    feedback.style.display = "block";
-
-    setTimeout(function () {
-      feedback.style.display = "none";
-    }, 5000);
-  }
-})();
-
+}
 /* ============================================================
    9. HOVER MAGNÉTICO EN BOTONES (efecto sutil)
    ============================================================ */
@@ -381,3 +421,22 @@ function throttle(fn, limit) {
     }
   };
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  initContactForm();
+});
+
+
+function throttle(fn, limit) {
+  var lastCall = 0;
+  return function () {
+    var now = Date.now();
+    if (now - lastCall >= limit) {
+      lastCall = now;
+      fn.apply(this, arguments);
+    }
+  };
+}
+
+// Inicializar formulario de contacto
+initContactForm();
