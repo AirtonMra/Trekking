@@ -297,11 +297,12 @@ function initContactForm() {
     // Limpiar mensajes anteriores
     feedback.textContent = "";
     feedback.className = "form-feedback";
+    feedback.style.display = "block";
 
     // Validación del nombre
     if (!nombre.value.trim()) {
       feedback.textContent = "Por favor, ingresá tu nombre.";
-      feedback.classList.add("error");
+      feedback.classList.add("form-feedback--error");
       nombre.focus();
       return;
     }
@@ -309,7 +310,7 @@ function initContactForm() {
     // Validación del email
     if (!email.value.trim() || !email.validity.valid) {
       feedback.textContent = "Por favor, ingresá un email válido.";
-      feedback.classList.add("error");
+      feedback.classList.add("form-feedback--error");
       email.focus();
       return;
     }
@@ -317,7 +318,7 @@ function initContactForm() {
     // Validación del mensaje
     if (!mensaje.value.trim()) {
       feedback.textContent = "Por favor, escribí un mensaje.";
-      feedback.classList.add("error");
+      feedback.classList.add("form-feedback--error");
       mensaje.focus();
       return;
     }
@@ -344,7 +345,7 @@ function initContactForm() {
         feedback.textContent =
           "¡Mensaje enviado correctamente! Te responderemos a la brevedad.";
 
-        feedback.classList.add("success");
+        feedback.classList.add("form-feedback--success");
 
         // Limpia los campos
         form.reset();
@@ -361,14 +362,14 @@ function initContactForm() {
             "No se pudo enviar el mensaje. Intentá nuevamente.";
         }
 
-        feedback.classList.add("error");
+        feedback.classList.add("form-feedback--error");
       }
     } catch (error) {
       // Error de conexión
       feedback.textContent =
         "Ocurrió un error de conexión. Intentá nuevamente.";
 
-      feedback.classList.add("error");
+      feedback.classList.add("form-feedback--error");
 
       console.error("Error al enviar el formulario:", error);
     } finally {
@@ -425,18 +426,3 @@ function throttle(fn, limit) {
 document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
 });
-
-
-function throttle(fn, limit) {
-  var lastCall = 0;
-  return function () {
-    var now = Date.now();
-    if (now - lastCall >= limit) {
-      lastCall = now;
-      fn.apply(this, arguments);
-    }
-  };
-}
-
-// Inicializar formulario de contacto
-initContactForm();
